@@ -4,6 +4,8 @@
 
 Clone or download this repo.
 
+First is Important copy or rename file **.env.example** to **.env**
+
 Then install dependencies:
 
 ```bash
