@@ -10,7 +10,7 @@ Then install dependencies:
 npm install
 ```
 
-## [Using Sass/LESS/Stylus](https://symfony.com/doc/current/frontend/encore/simple-example.html#using-sass-less-stylus)
+## [Using Sass/Scss/LESS/Stylus](https://symfony.com/doc/current/frontend/encore/simple-example.html#using-sass-less-stylus)
 
 For sass/scss:
 
