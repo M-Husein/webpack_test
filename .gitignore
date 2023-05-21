@@ -1,0 +1,15 @@
+node_modules
+/node_modules
+
+/public/dist
+/public/build
+/dist
+dist
+
+.env
+
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode

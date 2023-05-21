@@ -1,0 +1,5 @@
+@tailwind utilities;
+
+@layer utilities {
+  /* This won't be included in your compiled CSS unless you actually use it */
+}

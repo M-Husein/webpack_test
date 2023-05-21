@@ -1,0 +1,5 @@
+@tailwind base;
+
+@layer base {
+  /* This won't be included in your compiled CSS unless you actually use it */
+}
