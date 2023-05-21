@@ -25,11 +25,11 @@ Encore
   })
 
   // directory where compiled assets will be stored
-  .setOutputPath('public/dist/assets/') // 'public/build/'
+  .setOutputPath('public/dist/assets/')
   // public path used by the web server to access the output path
-  .setPublicPath('/dist/assets') // '/build'
+  .setPublicPath('/dist/assets')
   // only needed for CDN's or sub-directory deploy
-  // .setManifestKeyPrefix('dist/assets/') // 'build/'
+  // .setManifestKeyPrefix('dist/assets/')
 
   /*
     * ENTRY CONFIG
@@ -37,7 +37,7 @@ Encore
     * Each entry will result in one JavaScript file (e.g. app.js)
     * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
     */
-  .addEntry('apps', './sources/app.js') // './assets/app.js'
+  .addEntry('apps', './sources/app.js')
   .addEntry('framework', './sources/framework.js')
   .addEntry('library', './sources/library.js')
 
