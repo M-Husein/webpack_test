@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Webpack setup",
+  "author": "Muhamad Husein",
   "main": "index.js",
   "scripts": {
     "dev-server": "encore dev-server",
@@ -22,8 +23,6 @@
     "html",
     "web"
   ],
-  "author": "Muhamad Husein",
-  "license": "ISC",
   "browserslist": [
     "defaults"
   ],

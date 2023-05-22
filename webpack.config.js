@@ -47,14 +47,14 @@ Encore
   .addEntry(`framework-${nodeDev}`, './sources/javascript/framework.js')
   .addEntry(`library-${nodeDev}`, './sources/javascript/library.js')
 
-  .copyFiles({
-    from: './sources/fonts',
-    to: `/dist/${nodeDev}` // 'images/[path][name].[hash:8].[ext]'
-  })
-  .copyFiles({
-    from: './sources/image',
-    to: `/dist/${nodeDev}` // 'images/[path][name].[hash:8].[ext]'
-  })
+  // .copyFiles({
+  //   from: './sources/fonts',
+  //   to: `/dist/${nodeDev}` // 'images/[path][name].[hash:8].[ext]'
+  // })
+  // .copyFiles({
+  //   from: './sources/image',
+  //   to: `/dist/${nodeDev}`
+  // })
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge('./sources/controllers.json') // './assets/controllers.json'
