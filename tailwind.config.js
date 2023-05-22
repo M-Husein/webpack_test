@@ -1,5 +1,10 @@
-/** @type {import('tailwindcss').Config} */
+/** 
+ * @type {import('tailwindcss').Config} 
+ * @DOCS : https://tailwindcss.com/docs/configuration
+ */
+
 module.exports = {
+  // For Tailwind's base/reset styles
   // corePlugins: {
 	// 	preflight: false,
 	// },
@@ -16,7 +21,7 @@ module.exports = {
     },
   },
   plugins: [
-    
+
   ],
 }
 

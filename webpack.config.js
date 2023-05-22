@@ -1,10 +1,16 @@
+/**
+ * @DOCS : https://github.com/symfony/webpack-encore-bundle
+ */
+
 const path = require('path');
 const Encore = require('@symfony/webpack-encore');
+
+const nodeDev = process.env.NODE_ENV || 'dev';
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
 if (!Encore.isRuntimeEnvironmentConfigured()) {
-  Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
+  Encore.configureRuntimeEnvironment(nodeDev);
 }
 
 Encore
@@ -25,9 +31,9 @@ Encore
   })
 
   // directory where compiled assets will be stored
-  .setOutputPath('public/dist/assets/')
+  .setOutputPath(`public/dist/${nodeDev}/assets/`)
   // public path used by the web server to access the output path
-  .setPublicPath('/dist/assets')
+  .setPublicPath(`/dist/${nodeDev}/assets`)
   // only needed for CDN's or sub-directory deploy
   // .setManifestKeyPrefix('dist/assets/')
 
@@ -37,9 +43,18 @@ Encore
     * Each entry will result in one JavaScript file (e.g. app.js)
     * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
     */
-  .addEntry('apps', './sources/app.js')
-  .addEntry('framework', './sources/framework.js')
-  .addEntry('library', './sources/library.js')
+  .addEntry(`apps-${nodeDev}`, './sources/javascript/app.js')
+  .addEntry(`framework-${nodeDev}`, './sources/javascript/framework.js')
+  .addEntry(`library-${nodeDev}`, './sources/javascript/library.js')
+
+  .copyFiles({
+    from: './sources/fonts',
+    to: `/dist/${nodeDev}` // 'images/[path][name].[hash:8].[ext]'
+  })
+  .copyFiles({
+    from: './sources/image',
+    to: `/dist/${nodeDev}` // 'images/[path][name].[hash:8].[ext]'
+  })
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge('./sources/controllers.json') // './assets/controllers.json'
