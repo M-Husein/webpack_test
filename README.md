@@ -1,6 +1,6 @@
 # Webpack test
 
-## Webpack setup with Webpack encore and etc.
+## [Webpack](https://webpack.js.org/) setup with [Webpack encore](https://github.com/symfony/webpack-encore-bundle) and etc.
 
 Clone or download this repo.
 
@@ -20,19 +20,29 @@ For sass/scss:
 npm install sass -D
 ```
 
-Then uncomment **.enableSassLoader()** in webpack.config.js and rename all .css files in the sources/styles folder to .scss also change import statement in entry point files app.js, framework.js and library.js
+Then uncomment **.enableSassLoader()** in **webpack.config.js** and rename all **.css** files in the **sources/sass** folder to **.scss** also change import statement in entry point files **app.js**, **framework.js** and **library.js**.
 
 For example:
 
 ```js
-- import './styles/app.css';
-+ import './styles/app.scss';
+- import '../sass/app.css';
++ import '../sass/app.scss';
 ```
 
 For development:
 
 ```bash
 npm run dev
+```
+
+or
+
+```bash
+npm run dev-server
+```
+
+```bash
+npm run watch
 ```
 
 For Production:

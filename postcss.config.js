@@ -1,3 +1,7 @@
+/**
+ * @DOCS : https://github.com/postcss/postcss#usage
+ */
+
 module.exports = {
   plugins: {
     tailwindcss: {},
